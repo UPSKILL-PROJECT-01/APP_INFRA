@@ -1,0 +1,36 @@
+services:
+  oms_be:
+    build:
+      context: ./OMS_BE
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    env_file:
+      - ./OMS_BE/.env
+    networks:
+      - internal_network
+    # depends_on:
+    #   - mongodb
+
+  safe_tourism_be:
+    build:
+      context: ./SAFE_TOURISM_BE
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+    env_file:
+      - ./SAFE_TOURISM_BE/.env
+    networks:
+      - internal_network
+    # depends_on:
+    #   - mongodb
+
+  # mongodb:
+  #   image: mongo:latest
+  #   container_name: mongodb
+  #   ports:
+  #     - "27017:27017"
+
+networks:
+  internal_network:
+    driver: bridge

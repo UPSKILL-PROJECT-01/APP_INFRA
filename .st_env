@@ -1,0 +1,2 @@
+MONGO_DB_CON_STRING = "mongodb+srv://leilaticiane1:leila@cluster0.snjbq.mongodb.net/ST_API"
+API_PORT = "8081"
