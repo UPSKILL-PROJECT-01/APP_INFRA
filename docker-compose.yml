@@ -12,6 +12,19 @@ services:
     # depends_on:
     #   - mongodb
 
+  oms_fe:
+    build:
+      context: ./OMS_FE
+      dockerfile: Dockerfile
+    ports:
+      - "4200:4200"
+    # env_file:
+    #   - ./OMS_BE/.env
+    networks:
+      - internal_network
+    # depends_on:
+    #   - mongodb
+
   safe_tourism_be:
     build:
       context: ./SAFE_TOURISM_BE
@@ -20,6 +33,19 @@ services:
       - "8081:8081"
     env_file:
       - ./SAFE_TOURISM_BE/.env
+    networks:
+      - internal_network
+    # depends_on:
+    #   - mongodb
+
+  safe_tourism_fe:
+    build:
+      context: ./SAFE_TOURISM_FE
+      dockerfile: Dockerfile
+    ports:
+      - "4201:4201"
+    # env_file:
+    #   - ./SAFE_TOURISM_BE/.env
     networks:
       - internal_network
     # depends_on:

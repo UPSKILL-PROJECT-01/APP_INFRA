@@ -1,2 +1,6 @@
-MONGO_DB_CON_STRING = "mongodb+srv://leilaticiane1:leila@cluster0.snjbq.mongodb.net/omsApi"
+MONGO_DB_CON_STRING = "mongodb+srv://leilaticiane1:leila@cluster0.snjbq.mongodb.net/oms"
 API_PORT = "8080"
+TOKEN_TIME = "1000h"
+DB_ADMIN_EMAIL = "sudo"
+DB_ADMIN_PASS = "sudo"
+DB_FILE = "database.db"

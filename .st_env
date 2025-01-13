@@ -1,2 +1,7 @@
-MONGO_DB_CON_STRING = "mongodb+srv://leilaticiane1:leila@cluster0.snjbq.mongodb.net/ST_API"
+MONGO_DB_CON_STRING = "mongodb+srv://leilaticiane1:leila@cluster0.snjbq.mongodb.net/safe_tourism"
 API_PORT = "8081"
+TOKEN_TIME = "1000h"
+DB_ADMIN_EMAIL = "sudo@sudo.com"
+DB_ADMIN_PASS = "123123123"
+DB_FILE = "database.db"
+OMS_URL = "http://oms_be:8080"
